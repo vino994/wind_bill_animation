@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background:url(11.avif) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.stand{
+    width: 100px;
+    height: 450px;
+    background:linear-gradient(99deg,#fff,#6c6666);
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    border-radius: 70% 70% 0 0;
+    transform: translateX(50%);
+
+}
+/* .stand:before{
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: -50%;
+    transform: translateX(-25%);
+    border-radius: 100px 100px 0 0;
+} */
+.fan{
+    width: 150px;
+    height: 150px;
+    background:linear-gradient(99deg,#fff,#6c6666);
+    top: 16%;
+    left: 42%;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    animation: rotate 5s linear infinite;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.fan span{
+    width: 27%;
+    height: 303px;
+    background:linear-gradient(99deg,#fff,#6c6666);
+    position: absolute;
+ 
+    border-radius: 50% 50% 0 0;
+}
+.fan span:nth-child(1){
+    left: -88px;
+    top: 14%;
+    transform: rotateZ(238deg);
+}
+.fan span:nth-child(2){
+    left: 203px;
+    top: 6%;
+    transform: rotateZ(119deg);
+}
+.fan span:nth-child(3){
+    left: 54px;
+    top: -146%;
+    transform: rotateZ(0deg);
+}
+.fan::before{
+    width: 50%;
+    height: 50%;
+    
+    background:linear-gradient(99deg,#fff,#6c6666);
+    content: '';
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    border-radius: 50%;
+    position: absolute;
+}
